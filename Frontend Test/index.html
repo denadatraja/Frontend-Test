@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.bullets.min.js"></script>
+</head>
+<body class="font-sans">
+    <header class="bg-gray-200">
+        <div class="container mx-auto flex justify-between items-center py-2 px-4">
+            <div class="ml-16">
+                <!-- Hamburger Icon for Mobile -->
+                <div class="block sm:hidden absolute top-0 right-0 mt-4 mr-4">
+                    <button id="mobile-menu-toggle" class="text-gray-800 focus:outline-none">
+                        <ion-icon name="menu-outline" class="text-3xl"></ion-icon>
+                    </button>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden sm:flex items-center"> <!-- Change from hidden sm:block -->
+                    <a href="#" class="text-gray-800">Wholesale - Pros Only</a>
+                    <div class="dropdown flex ml-4">
+                        <a href="#" class="text-gray-800 ml-4">Retail</a>
+                    </div>
+                    
+                    <div class="search-box ml-16">
+                        <input type="text" placeholder="Search by name, category..." class="w-96 rounded-l-lg px-4 py-2 focus:outline-none">
+                        <button type="submit" class="bg-blue-900 text-white rounded-r-lg px-4 py-2"><ion-icon name="search-outline"></ion-icon></button>
+                    </div>
+                    <a href="#" class="text-gray-800 ml-16">Community</a>
+                    <div class="flex items-center ml-32">
+                        <!-- Added ml-32 to create space between Community and Cart -->
+                        <a href="#" class="relative flex items-center">
+                            <img src="shopping-cart.png" alt="Cart" class="w-4 h-4">
+                            <select class="absolute right-0 top-0 bg-transparent text-gray-800 py-0 px-0">
+                                <option selected disabled>Cart</option>
+                                <option value="view">View Cart</option>
+                                <option value="checkout">Checkout</option>
+                            </select>
+                        </a>
+                    </div>
+                    <div class="flex items-center ml-32"> <!-- Added ml-8 to create space between Cart and Account -->
+                        <a href="#" class="relative flex items-center">
+                            <img src="accoun1.png" alt="Account" class="w-4 h-4">
+                            <select class="absolute right-0 top-0 bg-transparent text-gray-800 py-0 px-0">
+                                <option selected disabled>Account</option>
+                                <option value="profile">Profile</option>
+                                <option value="settings">Settings</option>
+                                <option value="logout">Logout</option>
+                            </select>
+                        </a>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+    </header>
+               <!-- Mobile Navigation Menu -->
+               <div id="mobile-menu" class="sm:hidden bg-gray-200 px-4 py-2 absolute top-0 right-0 mt-16 mr-4 hidden">
+                <div class="rounded-md bg-white shadow-lg h-full p-4" id="mobile-menu-content">
+                    <ul>
+                        <li><a href="#" class="block text-gray-800 py-1">Wholesale - Pros Only</a></li>
+                        <li><a href="#" class="block text-gray-800 py-1">Retail</a></li>
+                        <li id="wholesale-menu" class="hidden">
+                            <ul>
+                                <li><a href="#" class="block text-gray-800 py-1">Body Jewelry</a></li>
+                                <li><a href="#" class="block text-gray-800 py-1">Piercing</a></li>
+                                <li><a href="#" class="block text-gray-800 py-1">Tattoo</a></li>
+                                <li><a href="#" class="block text-gray-800 py-1">Medical</a></li>
+                                <li><a href="#" class="block text-gray-800 py-1">Studio</a></li>
+                                <li><a href="#" class="block text-gray-800 py-1">Permanent Makeup</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+    
+    
+
+    
+    
+
+
+<!-- Your main content here -->
+
+<div class="container mx-auto mt-8 flex justify-center">
+    <div class="logo">
+        <img src="Painful.webp" alt="Logo" class="w-20">
+    </div>
+   
+    <div class="dropdown flex ml-4">
+            <div class="body-jewelry">
+                <select class="dropdown-select">
+                    <option selected disabled>Body Jewelry</option>
+                    <option value="earrings">Earrings</option>
+                    <option value="necklaces">Necklaces</option>
+                    <option value="bracelets">Bracelets</option>
+                    <option value="rings">Rings</option>
+                </select>
+            </div>
+            <div class="piercing">
+                <select class="dropdown-select">
+                    <option selected disabled>Piercing</option>
+                    <option value="ear">Ear Piercing</option>
+                    <option value="nose">Nose Piercing</option>
+                    <option value="navel">Navel Piercing</option>
+                    <option value="lip">Lip Piercing</option>
+                </select>
+            </div>
+            <div class="tattoo">
+                <select class="dropdown-select">
+                    <option selected disabled>Tattoo</option>
+                    <option value="small">Small Tattoo</option>
+                    <option value="medium">Medium Tattoo</option>
+                    <option value="large">Large Tattoo</option>
+                    <option value="custom">Custom Tattoo</option>
+                </select>
+            </div>
+            <div class="medical">
+                <select class="dropdown-select">
+                    <option selected disabled>Medical</option>
+                    <option value="surgical">Surgical Supplies</option>
+                    <option value="first-aid">First Aid</option>
+                    <option value="hygiene">Hygiene Products</option>
+                    <option value="equipment">Equipment</option>
+                </select>
+            </div>
+            <div class="studio">
+                <select class="dropdown-select">
+                    <option selected disabled>Studio</option>
+                    <option value="tattoo">Tattoo Studio</option>
+                    <option value="piercing">Piercing Studio</option>
+                    <option value="makeup">Makeup Studio</option>
+                    <option value="hair">Hair Studio</option>
+                </select>
+            </div>
+            <div class="permanent-makeup">
+                <select class="dropdown-select">
+                    <option selected disabled>Permanent Makeup</option>
+                    <option value="eyebrows">Eyebrows</option>
+                    <option value="eyeliner">Eyeliner</option>
+                    <option value="lips">Lips</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- Images section -->
+<div class="container mx-auto mt-16 flex justify-center">
+    <div class="grid grid-cols-3 gap-4" style="padding-left: 20px;">
+        <!-- Larger image on the left -->
+        <div class="relative col-span-2">
+            <img src="https://via.placeholder.com/220x200" alt="Large Image" class="w-full h-auto">
+            <div class="absolute bottom-0 left-0 right-0 text-blue text-right p-2">
+                <p class="text-sm">Product Name</p>
+                <button class="bg-white text-blue font-bold py-1 px-2 rounded mt-1">Shop Now</button>
+            </div>
+        </div>
+        <!-- Two smaller images stacked on the right -->
+        <div class="hidden sm:flex flex-col col-span-1">
+            <div class="relative">
+                <img src="https://via.placeholder.com/220x200" alt="Image 2" class="w-full h-auto">
+                <div class="absolute bottom-0 left-0 right-0 text-right p-2">
+                    <p class="text-sm text-white-500">Product Name</p>
+                    <button class="bg-white text-red-500 font-bold py-1 px-2 rounded mt-1">Shop Now</button>
+                </div>
+            </div>
+            <div class="mt-4 relative">
+                <img src="https://via.placeholder.com/220x200" alt="Image 3" class="w-full h-auto">
+                <div class="absolute bottom-0 left-0 right-0 text-center p-2">
+                    <p class="text-sm text-white-500">Product Name</p>
+                    <button class="bg-blue-500 text-white font-bold py-1 px-2 rounded mt-1">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- New section -->
+<div class="container mx-auto mt-16" style="padding: 0 30px;">
+    <div class="grid grid-cols-5 gap-4 justify-center">
+        <div class="col-span-1 flex flex-col items-center">
+            <h2 class="text-center">Tattoo Supplies</h2>
+            <img src="https://via.placeholder.com/2550x550" alt="Tattoo Supplies" class="mt-2 w-full h-auto">
+            <button class="bg-blue-900 text-white mt-2 px-4 py-2 w-full">Shop Now</button>
+        </div>
+        <div class="col-span-1 flex flex-col items-center">
+            <h2 class="text-center">Body Jewelry</h2>
+            <img src="https://via.placeholder.com/2550x550" alt="Body Jewelry" class="mt-2 w-full h-auto">
+            <button class="bg-blue-900 text-white mt-2 px-4 py-2 w-full">Shop Now</button>
+        </div>
+        <div class="col-span-1 flex flex-col items-center">
+            <h2 class="text-center">Piercing Supplies</h2>
+            <img src="https://via.placeholder.com/2550x550" alt="Piercing Supplies" class="mt-2 w-full h-auto">
+            <button class="bg-blue-900 text-white mt-2 px-4 py-2 w-full">Shop Now</button>
+        </div>
+        <div class="col-span-1 flex flex-col items-center">
+            <h2 class="text-center">Medical Supplies</h2>
+            <img src="https://via.placeholder.com/2550x550" alt="Medical Supplies" class="mt-2 w-full h-auto">
+            <button class="bg-blue-900 text-white mt-2 px-4 py-2 w-full">Shop Now</button>
+        </div>
+        <div class="col-span-1 flex flex-col items-center">
+            <h2 class="text-center">Permanent Makeup</h2>
+            <img src="https://via.placeholder.com/2550x550" alt="Permanent Makeup" class="mt-2 w-full h-auto">
+            <button class="bg-blue-900 text-white mt-2 px-4 py-2 w-full">Shop Now</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mx-auto mt-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">New Products</h2>
+    <div class="carousel-container">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <!-- Product cards for the first four products -->
+                    <li class="glide__slide bg-white rounded-lg shadow-md p-4">
+                        <img src="https://via.placeholder.com/100" alt="Copper Rook Quill Rotary Tattoo Machine" class="w-32 h-auto">
+                        <div class="mt-2">Copper Rook Quill Rotary Tattoo Machine</div>
+                        <div class="mt-2 text-blue-500">Price: $449.99</div>
+                        
+                    </li>
+                    <li class="glide__slide bg-white rounded-lg shadow-md p-4">
+                        <img src="https://via.placeholder.com/100" alt="Blue Rook Quill Rotary Tattoo Machine" class="w-32 h-auto">
+                        <div class="mt-2">Blue Rook Quill Rotary Tattoo Machine</div>
+                        <div class="mt-2 text-blue-500">Price: $449.99</div>
+                       
+                    </li>
+                    <li class="glide__slide bg-white rounded-lg shadow-md p-4">
+                        <img src="https://via.placeholder.com/100" alt="Pre-Order - Inkjecta Flite X1 Wireless Tattoo Machine" class="w-32 h-auto">
+                        <div class="mt-2">Pre-Order - Inkjecta Flite X1 Wireless Tattoo Machine</div>
+                        <div class="mt-2 text-blue-500">Price: $1,199.99</div>
+                       
+                    </li>
+                    <li class="glide__slide bg-white rounded-lg shadow-md p-4">
+                        <img src="https://via.placeholder.com/100" alt="Pre-Order - Inkjecta Flite X1 Wireless Tattoo Machine" class="w-32 h-auto">
+                        <div class="mt-2">Pre-Order - Inkjecta Flite X1 Wireless Tattoo Machine</div>
+                        <div class="mt-2 text-blue-500">Price: $1,199.99</div>
+                       
+                    </li>
+                    <!-- Add more product slides as needed -->
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir=">">&#60;</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#62;</button>
+           </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Glide.js JavaScript -->
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        perView: 4, // Default number of slides per view
+        gap: 20, // Gap between slides
+        breakpoints: {
+            1024: {
+                perView: 3 // Number of slides per view for tablets
+            },
+            768: {
+                perView: 2 // Number of slides per view for small devices
+            },
+            480: {
+                perView: 1 // Number of slides per view for mobile devices
+            }
+        }
+    });
+
+    glide.mount({
+        Bullets: {
+            type: 'classical',
+            classes: {
+                bullet: 'glide__bullet',
+                active: 'glide__bullet--active'
+            }
+        }
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-menu-content').addEventListener('click', function (event) {
+            if (event.target.textContent === 'Wholesale - Pros Only') {
+                document.getElementById('wholesale-menu').classList.toggle('hidden');
+            }
+        });
+    });
+</script>
+
+
+
+</header>
+
+
+<!-- Your main content here -->
+
+<footer>
+    <!-- Footer content here -->
+</footer>
+
+
+
+
+
